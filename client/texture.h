@@ -23,13 +23,7 @@ class Texture : public Drawable {
 
   void free();
 
-<<<<<<< HEAD
     SDL_Texture* getTexture();
-=======
-  void loadTexture2(const std::string& filename, SDL_Renderer*);
-
-  void render2(SDL_Renderer* renderer);
->>>>>>> master
 
   virtual int getWidth() const;
 

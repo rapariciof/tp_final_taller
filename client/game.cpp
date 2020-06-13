@@ -48,15 +48,10 @@ void Game::deleteTextures() {
 bool Game::chargeGraphics() {
   textures.push_back(new Texture());
   textures.push_back(new Texture());
-<<<<<<< HEAD
   textures.push_back(new Texture());
   textures.at(0)->loadTexture((std::string)PATH_HUMAN_BODY, renderer);
   textures.at(1)->loadTexture((std::string)PATH_HUMAN_HEAD, renderer);
   textures.at(2)->loadTexture((std::string) "mapa.png", renderer);
-=======
-  textures.at(0)->loadTexture((std::string)PATH_GNOME_BODY, renderer);
-  textures.at(1)->loadTexture((std::string)PATH_GNOME_HEAD, renderer);
->>>>>>> master
 
   return EXIT_SUCCESS;
 }

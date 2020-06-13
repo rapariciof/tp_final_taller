@@ -11,7 +11,6 @@ Texture::Texture() {
 Texture::~Texture() { free(); }
 
 void Texture::loadTexture(std::string path_file, SDL_Renderer* renderer) {
-<<<<<<< HEAD
     // Libera la textura si ya tenia algo cargado
     free();
 
@@ -39,32 +38,6 @@ void Texture::loadTexture(std::string path_file, SDL_Renderer* renderer) {
         }
         // Liberamos la surface
         SDL_FreeSurface(new_surface);
-=======
-  // Libera la textura si ya tenia algo cargado
-  free();
-
-  // La textura final
-  SDL_Texture* new_texture = NULL;
-
-  SDL_Surface* new_surface = IMG_Load(path_file.c_str());
-  // texture = IMG_LoadTexture(renderer, filename.c_str());
-
-  if (!new_surface)
-    throw SdlException("Error al cargar la textura", SDL_GetError());
-  else {
-    // Color key image
-    SDL_SetColorKey(new_surface, SDL_TRUE,
-                    SDL_MapRGB(new_surface->format, 0, 0, 0));
-
-    // Create texture from surface pixels
-    new_texture = SDL_CreateTextureFromSurface(renderer, new_surface);
-    if (!new_texture) {
-      throw SdlException("Error al cargar la textura", SDL_GetError());
-    } else {
-      // Cargamos las dimensiones de la imagen
-      width = new_surface->w;
-      height = new_surface->h;
->>>>>>> master
     }
     // Liberamos la surface
     SDL_FreeSurface(new_surface);
