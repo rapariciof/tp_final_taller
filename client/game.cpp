@@ -48,10 +48,15 @@ void Game::deleteTextures() {
 bool Game::chargeGraphics() {
   textures.push_back(new Texture());
   textures.push_back(new Texture());
+<<<<<<< HEAD
   textures.push_back(new Texture());
   textures.at(0)->loadTexture((std::string)PATH_HUMAN_BODY, renderer);
   textures.at(1)->loadTexture((std::string)PATH_HUMAN_HEAD, renderer);
   textures.at(2)->loadTexture((std::string) "mapa.png", renderer);
+=======
+  textures.at(0)->loadTexture((std::string)PATH_GNOME_BODY, renderer);
+  textures.at(1)->loadTexture((std::string)PATH_GNOME_HEAD, renderer);
+>>>>>>> master
 
   return EXIT_SUCCESS;
 }
@@ -100,12 +105,17 @@ void Game::eventHandler() {
 }
 // mejorar
 void Game::update() {
+<<<<<<< HEAD
   SDL_Rect mapa = {0, 0, 800, 600};
   SDL_Rect dest = {0, 0, 800, 600};
   SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0xFF);
   SDL_RenderClear(renderer);
   SDL_RenderCopy(renderer, textures.at(2)->getTexture(), &mapa, &dest);
 
+=======
+  SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0xFF);
+  SDL_RenderClear(renderer);
+>>>>>>> master
   textures.at(0)->render(renderer, &body_player,
                          screen_width / 2 - (player->getBodyW() / 2),
                          screen_height / 2 - (player->getBodyH() / 2));

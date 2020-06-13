@@ -8,34 +8,40 @@
 #include "sdl_exception.h"
 
 class Texture : public Drawable {
-   private:
-    SDL_Texture* texture;
+ private:
+  SDL_Texture* texture;
 
-   public:
-    Texture();
+ public:
+  Texture();
 
-    ~Texture();
+  ~Texture();
 
-    // Renderiza la textura en un x e y concreto
-    virtual void render(SDL_Renderer*, SDL_Rect*, int, int);
+  // Renderiza la textura en un x e y concreto
+  virtual void render(SDL_Renderer*, SDL_Rect*, int, int);
 
-    void loadTexture(std::string, SDL_Renderer*);
+  void loadTexture(std::string, SDL_Renderer*);
 
-    void free();
+  void free();
 
+<<<<<<< HEAD
     SDL_Texture* getTexture();
+=======
+  void loadTexture2(const std::string& filename, SDL_Renderer*);
 
-    virtual int getWidth() const;
+  void render2(SDL_Renderer* renderer);
+>>>>>>> master
 
-    virtual int getHeight() const;
+  virtual int getWidth() const;
 
-    virtual int getX() const;
+  virtual int getHeight() const;
 
-    virtual int getY() const;
+  virtual int getX() const;
 
-    virtual void setX(int);
+  virtual int getY() const;
 
-    virtual void setY(int);
+  virtual void setX(int);
+
+  virtual void setY(int);
 };
 
 #endif
