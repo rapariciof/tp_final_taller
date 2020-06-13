@@ -3,8 +3,9 @@
 #include <SDL2/SDL_image.h>
 
 #include <string>
-#include "sdl_exception.h"
+
 #include "drawable.h"
+#include "sdl_exception.h"
 
 class Texture : public Drawable {
    private:
@@ -22,9 +23,7 @@ class Texture : public Drawable {
 
     void free();
 
-    void loadTexture2(const std::string &filename, SDL_Renderer*);
-
-    void render2(SDL_Renderer* renderer);
+    SDL_Texture* getTexture();
 
     virtual int getWidth() const;
 

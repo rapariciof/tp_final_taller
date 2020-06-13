@@ -10,13 +10,12 @@ Texture::Texture() {
 
 Texture::~Texture() { free(); }
 
-void Texture::loadTexture(std::string path_file,
-                          SDL_Renderer* renderer) {
-    //Libera la textura si ya tenia algo cargado                      
+void Texture::loadTexture(std::string path_file, SDL_Renderer* renderer) {
+    // Libera la textura si ya tenia algo cargado
     free();
-    
+
     // La textura final
-	  SDL_Texture* new_texture = NULL;
+    SDL_Texture* new_texture = NULL;
 
     SDL_Surface* new_surface = IMG_Load(path_file.c_str());
     // texture = IMG_LoadTexture(renderer, filename.c_str());
@@ -52,22 +51,24 @@ void Texture::render(SDL_Renderer* renderer, SDL_Rect* clip, int x_dest,
         quad_dest.h = clip->h;
         quad_dest.w = clip->w;
     }
-    
+
     if (SDL_RenderCopy(renderer, texture, clip, &quad_dest))
         throw SdlException("Error al renderizar la textura", SDL_GetError());
 }
 
 void Texture::free() {
-	//Free texture if it exists
-	if (texture != NULL) {
-		SDL_DestroyTexture(texture);
-		texture = NULL;
-		width = 0;
-		height = 0;
-		x = 0;
-		y = 0;
-	}
+    // Free texture if it exists
+    if (texture != NULL) {
+        SDL_DestroyTexture(texture);
+        texture = NULL;
+        width = 0;
+        height = 0;
+        x = 0;
+        y = 0;
+    }
 }
+
+SDL_Texture* Texture::getTexture() { return texture; }
 
 int Texture::getWidth(void) const { return width; }
 
