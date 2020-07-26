@@ -7,7 +7,13 @@ Desarrollado en 6 semanas por tres estudiantes de Facultad de Ingeniería de la 
 
 ![Gif intro](images/intro2.gif)
 
-Documentación adicional:
+## Documentación adicional:
+
+[Manual de usuario](https://github.com/rapariciof/tp_final_taller/blob/master/Documentation/Documentaci%C3%B3n%20de%20usuario.pdf)
+
+[Manual de proyecto](https://github.com/rapariciof/tp_final_taller/blob/master/Documentation/Documentaci%C3%B3n%20de%20proyecto.pdf)
+
+[Documentacion técnica](https://github.com/rapariciof/tp_final_taller/blob/master/Documentation/Documentaci%C3%B3n%20t%C3%A9cnica%20.pdf)
 
 ## Dependencias
 Dentro del instalador del juego estás dependencias serán provistas en caso de que el usuario lo desee.
